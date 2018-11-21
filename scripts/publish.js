@@ -120,7 +120,7 @@ function checkout() {
   execSync(`git checkout -b publish-${nextVersion}`);
   execSync('git add .');
   execSync(`git commit -m "release(${nextVersion}): release ${nextVersion}"`);
-  execSync(`git push origin publish-${nextVersion}`);
+  execSync(`git push origin publish-${nextVersion} -u`);
   log.success('Please go to GitHub and make a pull request.');
   log.success('Bye!');
 }

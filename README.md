@@ -4,15 +4,12 @@
 [![GitHub](https://img.shields.io/github/license/matai-tech/matai-pro.svg?style=popout-square)](https://github.com/matai-tech/matai-pro/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/matai-pro.svg?style=popout-square)](https://www.npmjs.com/package/matai-pro)
 
-UI is from [https://github.com/FlorianFe/Elements](https://github.com/FlorianFe/Elements)
-
 Dev environment is from [ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd)
-
-<img src="https://github.com/matai-tech/matai-pro/blob/master/components/assets/view.gif" alt="view">
 
 ## Quick start
 
 ```shell
+$ npm install three -S
 $ npm install matai-pro -S
 ```
 

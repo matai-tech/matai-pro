@@ -2,7 +2,7 @@
   "name": "matai-pro",
   "version": "0.0.0-NotUsed",
   "scripts": {
-    "build": "ng build",
+    "build": "ng build --prod --base-href=/matai-pro-doc/",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --pkg components/package.json",
     "e2e": "ng e2e",
     "generate": "bash ./build.sh",
@@ -10,7 +10,8 @@
     "lint": "tslint -c tslint.json 'components/*/*.ts'",
     "start": "ng serve --port 4202",
     "release": "node ./scripts/publish.js",
-    "test": "ng test"
+    "test": "ng test",
+    "move-doc": "cp -r ./dist/matai-pro/* ../matai-pro-doc/ && cd ../matai-pro-doc/ && git add . && git commit -m 'update: docs' && git push"
   },
   "private": true,
   "dependencies": {

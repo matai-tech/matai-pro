@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DemoCrystalComponent } from './crystal/crystal';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'crystal', pathMatch: 'full' },
   { path: 'crystal', component: DemoCrystalComponent }
 ];
 

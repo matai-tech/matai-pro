@@ -43,3 +43,13 @@ $ npm install
 $ npm run start
 ```
 
+## Publish
+```shell
+$ npm config set scope mta-tech
+$ npm run generate
+$ npm run release
+# after CI passed
+$ cd publish && npm publish
+```
+
+

@@ -1,0 +1,32 @@
+{
+  "name": "matai-pro",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matai-tech/matai-pro.git"
+  },
+  "author": "wenqi73",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matai-tech/matai-pro/issues"
+  },
+  "main": "./bundles/index.umd.js",
+  "module": "./esm5/index.js",
+  "es2015": "./esm2015/index.js",
+  "typings": "./index.d.ts",
+  "homepage": "https://github.com/matai-tech/matai-pro#readme",
+  "dependencies": {
+    "three-orbit-controls": "^82.1.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^6.0.0",
+    "@angular/core": "^6.0.0",
+    "tslib": "^1.9.0",
+    "three": "^0.98.0",
+    "typescript": "~2.9.2"
+  }
+}

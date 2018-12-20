@@ -1,0 +1,59 @@
+<div *ngIf="element && isShowElDetail" class="container">
+  <div class="item">
+    <!-- <chemical-element-visualisation symbol="{{symbol}}"></chemical-element-visualisation> -->
+  </div>
+  <div class="item-3x">
+    <div id="details-area">
+      <div class="container">
+        <div class="item">
+          <table>
+            <tr>
+              <td class="indexer"><b class="element.group">{{element.name}}</b></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="indexer"></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="indexer"><b>atomic-number</b></td>
+              <td>{{element['atomic-number']}}</td>
+            </tr>
+            <tr>
+              <td class="indexer"><b>atomic-weight</b></td>
+              <td>{{element['atomic-weight']}}&nbsp;u</td>
+            </tr>
+            <!-- <tr>
+              <td class="indexer"><b>electronegativity</b></td>
+              <td>{{element.electronegativity}}</td>
+            </tr> -->
+          </table>
+        </div>
+        <div class="item">
+          <table>
+            <tr>
+              <td class="indexer"></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="indexer"></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="indexer"></td>
+              <td>&nbsp;</td>
+            </tr>
+            <!-- <tr>
+              <td class="indexer"><b>boiling point</b></td>
+              <td>{{element['boiling-point']}}</td>
+            </tr>
+            <tr>
+              <td class="indexer"><b>melting point</b></td>
+              <td>{{element['melting-point']}}</td>
+            </tr> -->
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,11 +3,14 @@
     <div class="logo">
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu>
+      <li nz-submenu [nzOpen]="true">
         <span title><i nz-icon type="user"></i><span class="nav-text">Components</span></span>
         <ul>
           <li nz-menu-item routerLinkActive="ant-menu-item-selected">
             <a [routerLink]="['/crystal']">晶体结构</a>
+          </li>
+          <li nz-menu-item routerLinkActive="ant-menu-item-selected">
+            <a [routerLink]="['/periodic-table']">元素周期表</a>
           </li>
         </ul>
       </li>

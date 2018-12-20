@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
+import { NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { DemoCrystalComponent } from './crystal/crystal';
-import { MataiProModule } from 'components/matai-pro.module';
+import { MataiProModule } from 'mta-pro';
 import { ShareModule } from './share/share.module';
+import { DemoPeriodicTableComponent } from './periodic-table/periodic-table';
 
 registerLocaleData(zh);
 
@@ -19,6 +20,7 @@ registerLocaleData(zh);
   declarations: [
     AppComponent,
     DemoCrystalComponent,
+    DemoPeriodicTableComponent,
   ],
   imports: [
     BrowserModule,

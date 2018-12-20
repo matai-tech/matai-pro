@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <mta-crystal [height]="400" [vectors]="vectors" [points]="points"></mta-crystal>
+  <mta-periodic-table></mta-periodic-table>
   `,
   styles: []
 })

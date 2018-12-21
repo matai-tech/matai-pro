@@ -1,6 +1,6 @@
 # MataiPro
 
-[![Travis (.com)](https://img.shields.io/travis/com/matai-tech/matai-pro.svg?style=popout-square)](https://travis-ci.org/matai-tech/matai-pro)
+[![Travis (.com)](https://img.shields.io/travis/matai-tech/matai-pro.svg?style=popout-square)](https://travis-ci.org/matai-tech/matai-pro.svg?branch=master)
 [![GitHub](https://img.shields.io/github/license/matai-tech/matai-pro.svg?style=popout-square)](https://github.com/matai-tech/matai-pro/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/matai-pro.svg?style=popout-square)](https://www.npmjs.com/package/matai-pro)
 
@@ -46,9 +46,9 @@ $ npm run start
 ## Publish
 ```shell
 $ npm config set scope mta-tech
-$ npm run generate
 $ npm run release
 # after CI passed
+$ npm run generate
 $ cd publish && npm publish
 ```
 

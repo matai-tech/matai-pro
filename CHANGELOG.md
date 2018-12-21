@@ -1,3 +1,12 @@
+<a name="0.2.0"></a>
+# 0.2.0 (2018-12-21)
+
+### Features
+
+* **component:periodic-table:** add periodic table ([#3](https://github.com/matai-tech/matai-pro/issues/3)) ([2ce768a](https://github.com/matai-tech/matai-pro/commit/2ce768a))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2018-11-21)
 

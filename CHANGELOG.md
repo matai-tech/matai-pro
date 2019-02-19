@@ -1,3 +1,12 @@
+<a name="0.2.1"></a>
+## 0.2.1 (2019-02-19)
+
+
+### Bug Fixes
+
+* repaint chart when input changes ([#5](https://github.com/matai-tech/matai-pro/issues/5)) ([2efd72c](https://github.com/matai-tech/matai-pro/commit/2efd72c))
+
+
 <a name="0.2.0"></a>
 # 0.2.0 (2018-12-21)
 

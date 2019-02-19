@@ -4,6 +4,7 @@ import {
   ElementRef,
   ViewChild,
   HostBinding,
+  OnChanges,
   Input,
   ChangeDetectionStrategy,
 } from '@angular/core';
@@ -24,7 +25,7 @@ interface Vector {
   template: `<div #container></div>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CrystalComponent implements OnInit {
+export class CrystalComponent implements OnChanges {
   renderer: THREE.WebGLRenderer;
   controls: any;
   camera: THREE.OrthographicCamera;
@@ -38,12 +39,20 @@ export class CrystalComponent implements OnInit {
   @Input() height = 300;
 
   // 基本向量
-  @Input() vectors: Vector[];
+  @Input() vectors: Vector[] = [
+    { x: 1, y: 0, z: 0 },
+    { x: 0, y: 1, z: 0 },
+    { x: 0, y: 0, z: 1 },
+  ];
 
   // 原子
   @Input() points: any[];
 
   @Input() system = 'Direct';
+
+  ngOnChanges(changes: any): void {
+    this.threeStart();
+  }
 
   initObject() {
     if (!this.vectors) {
@@ -131,6 +140,7 @@ export class CrystalComponent implements OnInit {
     this.width = this.node.nativeElement.clientWidth;
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(this.width, this.height);
+    this.node.nativeElement.innerHTML = '';
     this.node.nativeElement.appendChild(this.renderer.domElement);
     this.renderer.setClearColor(0xFFFFFF, 0.9);
   }
@@ -185,9 +195,5 @@ export class CrystalComponent implements OnInit {
     this.initObject();
     this.initControl();
     this.animation();
-  }
-
-  ngOnInit() {
-    this.threeStart();
   }
 }

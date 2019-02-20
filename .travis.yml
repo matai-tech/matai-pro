@@ -6,7 +6,7 @@ node_js:
 
 env:
   # - TASK=pre-release
-  # - TASK=test
+  - TASK=test
   - TASK=lint
   - TASK=integration-cli
   # - TASK=integration-webpack
@@ -30,7 +30,3 @@ before_script:
 
 script:
   - npm run $TASK
-  - |
-    if [ "$TASK" = "test" ]; then
-      cat ./coverage/lcov.info | ./node_modules/.bin/codecov
-    fi

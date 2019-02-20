@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit,
   ElementRef,
   ViewChild,
   HostBinding,
@@ -161,7 +160,10 @@ export class CrystalComponent implements OnChanges {
    */
   initControl() {
     const orbitControls = require('three-orbit-controls')(THREE);
-    this.controls = new orbitControls(this.camera, this.renderer.domElement);
+    this.controls = new orbitControls(this.camera);
+    // 旋转中心点为三个基本向量的中点
+    // https://stackoverflow.com/questions/34526500/threejs-orbitcontrol-with-different-rotate-center-and-lookat-point
+    this.controls.target.set(this.vectors[0].x / 2, this.vectors[1].y / 2, this.vectors[2].z / 2);
     this.controls.minDistance = 2;
     this.controls.maxDistance = 50;
     this.controls.update();
@@ -182,6 +184,7 @@ export class CrystalComponent implements OnChanges {
 
   // 帧循环、游戏循环
   animation() {
+    this.controls.update();
     this.renderer.render(this.scene, this.camera);
     // https://stackoverflow.com/questions/43466240/requestanimationframe-is-being-called-only-once
     requestAnimationFrame(this.animation.bind(this));

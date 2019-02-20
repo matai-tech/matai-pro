@@ -6,7 +6,7 @@
     "declaration": true,
     "importHelpers": true,
     "module": "es2015",
-    "sourceMap": true,
+    "sourceMap": false,
     "target": "es2015",
     "types": [
       "node"

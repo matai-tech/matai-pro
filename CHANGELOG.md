@@ -1,3 +1,9 @@
+<a name="0.2.2"></a>
+## [0.2.2](2019-02-20)
+
+* change rotate point (close [#2](https://github.com/matai-tech/matai-pro/issues/2))
+
+
 <a name="0.2.1"></a>
 ## 0.2.1 (2019-02-19)
 

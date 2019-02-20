@@ -24,7 +24,7 @@ let globals = {
 };
 
 let plugins = [
-  sourcemaps(),
+  // sourcemaps(),
   // replace({ "import * as setMonth ": "import " }),
   resolve(),
 ];
@@ -47,6 +47,6 @@ export default {
     exports  : 'named',
     name     : 'matai-pro',
     globals,
-    sourcemap: true,
+    sourcemap: false,
   }
 }

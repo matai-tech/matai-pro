@@ -10,7 +10,7 @@
     "lint": "tslint -c tslint.json 'components/*/*.ts'",
     "start": "ng serve --port 4202",
     "release": "node ./scripts/publish.js",
-    "test": "ng test",
+    "test": "ng test --watch=false --code-coverage",
     "move-doc": "cp -r ./dist/matai-pro/* ../matai-pro-doc/ && cd ../matai-pro-doc/ && git add . && git commit -m 'update: docs' && git push"
   },
   "private": true,

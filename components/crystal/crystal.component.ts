@@ -41,7 +41,7 @@ export class CrystalComponent implements OnChanges {
   @Input() vectors: Vector[] = [
     { x: 1, y: 0, z: 0 },
     { x: 0, y: 1, z: 0 },
-    { x: 0, y: 0, z: 1 },
+    { x: 0, y: 0, z: 1 }
   ];
 
   // 原子
@@ -54,9 +54,18 @@ export class CrystalComponent implements OnChanges {
   }
 
   initObject() {
-    if (!this.vectors) {
-      console.warn('vectors is required');
-      return;
+    if (
+      !this.vectors ||
+      !Array.isArray(this.vectors) ||
+      this.vectors.length !== 3 ||
+      this.vectors[0].hasOwnProperty('x')
+    ) {
+      throw new Error(`Vectors should be Array like
+      [
+        { x: 1, y: 0, z: 0 },
+        { x: 0, y: 1, z: 0 },
+        { x: 0, y: 0, z: 1 }
+      ]`);
     }
 
     // 长宽高
@@ -160,7 +169,7 @@ export class CrystalComponent implements OnChanges {
    */
   initControl() {
     const orbitControls = require('three-orbit-controls')(THREE);
-    this.controls = new orbitControls(this.camera);
+    this.controls = new orbitControls(this.camera, this.renderer.domElement);
     // 旋转中心点为三个基本向量的中点
     // https://stackoverflow.com/questions/34526500/threejs-orbitcontrol-with-different-rotate-center-and-lookat-point
     this.controls.target.set(this.vectors[0].x / 2, this.vectors[1].y / 2, this.vectors[2].z / 2);
